@@ -1,0 +1,212 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #272822;
+    color: #e0e0e0;
+}
+
+.container {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+    flex-direction: column;
+    height: 158vh;
+}
+
+.sidebar {
+    width: 100%;
+    height: 320px;
+    background: #272822;
+    margin: 0;
+    margin-left: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h1 {
+    color: #d1d1d1;
+    font-size: 23px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    margin-top: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.sidebar h2 {
+    color: #7e7e7e;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    /* Her ul'yi %48 genişlikte yap */
+    display: inline-block;
+    /* Yan yana yerleştir */
+    vertical-align: top;
+}
+
+.sidebar ul li {
+    margin-bottom: 0px;
+}
+
+.sidebar ul li a.active {
+    color: white;
+    /* Yazı rengi */
+    border-radius: 0px;
+    /* Köşeleri yuvarla */
+}
+
+.sidebar ul li a {
+    color: #666666;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    margin-left: 30px;
+    padding-bottom: 8px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #272822;
+    color: #fff;
+    transform: scale(1);
+
+}
+
+.content {
+    flex: 1;
+    padding-top: 28px;
+    padding-left: 3%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 10px rgba(5, 5, 5, 0.5);
+
+}
+
+.content h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 360;
+    color: rgb(39, 40, 34);
+    margin-bottom: 0px;
+    font-size: 25px;
+    letter-spacing: 0px;
+}
+
+.content h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #777;
+    font-size: 15px;
+    margin-top: 0;
+    letter-spacing: 0px;
+}
+
+
+
+.text_canvasAlt {
+    /* burası yazılar ve animastonların bulunacagı yer*/
+    display: block;
+    width: 100%;
+    max-width: 45%;
+    /* Dikdörtgen genişliği */
+    height: 1000px;
+    /* Dikdörtgen yüksekliği */
+    border: 3px solid #ddd;
+    /* Sınır eklemek için*/
+    padding: 0px;
+    /* İçeriden boşluk */
+    box-sizing: border-box;
+    /* Padding dahil */
+    overflow: hidden;
+    /* Taşmayı yönetmek için kaydırma çubuğu ekler */
+    background-color: rgb(255, 255, 255);
+    /* Arka plan rengi */
+    border-radius: 8px;
+    /* Köşeleri yuvarlatmak için (isteğe bağlı) */
+}
+
+.text_canvasAlt p {
+
+    font-size: 15px;
+    font-family: 'Vollkorn', serif;
+    color: #222222;
+    letter-spacing: 0px;
+    font-weight: 400;
+    margin-block-end: 15px;
+    margin-block-start: 15px;
+}
+
+canvas {
+    margin-top: 20px;
+    border: 2px solid #d10000;
+    border-radius: 8px;
+}
+
+.footer {
+    background-color: #272822;
+    /* Footer arka plan rengi */
+    color: rgb(224, 0, 0);
+    /* Footer yazı rengi */
+    text-align: left;
+    /* Ortala */
+    padding: 10px 0;
+    /* Üst ve alt boşluk */
+    position: auto;
+    /* Sayfanın altında sabit duracak */
+    bottom: 0;
+    /* Ekranın altına yapıştır */
+    width: 100%;
+    /* Tam genişlik */
+}
+
+.footer-button {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+
+
+    background-color: #272822;
+    /* Buton rengi */
+    border: none;
+    /* Çerçeve yok */
+    color: #999;
+    /* Yazı rengi */
+    padding: 10px 20px;
+    /* İçerik boşluğu */
+    margin: 0 10px;
+    /* Butonlar arası boşluk */
+    text-align: center;
+    /* Yazıyı ortala */
+    text-decoration: none;
+    /* Alt çizgi yok */
+    /* Yazı boyutu */
+    cursor: pointer;
+    /* İmleç işareti */
+    border-radius: 4px;
+    /* Köşeleri yuvarla */
+    transition: background-color 0.3s, transform 0.2s;
+    /* Animasyon */
+}
+
+.footer-button:hover {
+    background-color: #272822;
+    color: #c2c1c1;
+    transform: scale(1.02);
+}
