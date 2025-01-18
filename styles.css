@@ -153,6 +153,33 @@ body {
     margin-block-start: 15px;
 }
 
+
+#animationContainer {
+    width: 600px;
+    height: 150px;
+    border: 1px solid #ffffff;
+    /* Görsel olarak sınır eklemek için */
+    background-color: #f0f0f0;
+    /* Arka plan rengi */
+    position: relative;
+}
+
+#unitCircle {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.text_canvasAlt button {
+    color: #d10000
+}
+
 canvas {
     margin-top: 20px;
     border: 2px solid #d10000;
