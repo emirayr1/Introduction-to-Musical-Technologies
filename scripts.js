@@ -4,7 +4,7 @@ window.onload = function () {
 };
 
 
-function showContent(topic) {
+function showContent(topic) {    // SAYFA DEĞİŞTİRME VE AKTİFLİK AYARLAMA - SETCONTAİNERHEİGHT VE SETANİAMTİONPAGE --
   // Hide all content divs
   const sections = document.querySelectorAll('.content > div');
   sections.forEach(section => section.style.display = 'none');
@@ -14,7 +14,7 @@ function showContent(topic) {
 
 
   // SET CONTAINER HEIGHT
-  setContainerHeight(topic);
+
 
   // Remove 'active' class from all sidebar links
   const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
@@ -26,6 +26,8 @@ function showContent(topic) {
     activeLink.classList.add('active');
   }
 
+  setContainerHeight(topic);
+  setAnimationPage(topic)
   // Scroll to the top of the page
   window.scrollTo(0, 0);
 }
@@ -56,6 +58,27 @@ function setContainerHeight(page) {
     textCanvasAlt.height = 'auto' // Diğer sayfalarda otomatik
   }
 }
+
+function setAnimationPage(page) {
+  stopAnimationCircle();
+  stopAnimation();
+
+  if (page == 'fft') {
+    resetMolecules();
+    createMolecules();
+    time = 0;
+    startAnimation();
+  }
+  else if (page == 'fourier') {
+    startAnimationCircle();
+  }
+  else {
+    stopAnimation();
+  }
+}
+
+
+
 
 // Footer navigation logic
 const sectionsOrder = ['intro', 'signals', 'sine_cosine', 'fourier', 'fft'];
@@ -90,39 +113,6 @@ function getCurrentVisibleSection() {
 document.getElementById('nextButton').addEventListener('click', navigateToNext);
 document.getElementById('prevButton').addEventListener('click', navigateToPrev);
 
-// Signal drawing animation (for 'Signals' section)
-function drawSignal() {
-  const canvas = document.getElementById('signalCanvas');
-  const ctx = canvas.getContext('2d');
 
-  // Canvas dimensions and properties
-  const width = canvas.width;
-  const height = canvas.height;
-  const amplitude = 50; // Height of the wave
-  const frequency = 0.05; // Tightness of the wave
-  const speed = 0.1; // Speed of wave movement
-  let time = 0;
 
-  // Function to animate the sine wave
-  function animateWave() {
-    ctx.clearRect(0, 0, width, height); // Clear the canvas
-    ctx.beginPath();
-    ctx.strokeStyle = '#ff5e5e'; // Wave color
-    ctx.lineWidth = 2;
 
-    for (let x = 0; x < width; x++) {
-      const y = Math.sin(frequency * (x + time)) * amplitude + height / 2;
-      if (x === 0) {
-        ctx.moveTo(x, y);
-      } else {
-        ctx.lineTo(x, y);
-      }
-    }
-
-    ctx.stroke(); // Draw the wave
-    time += speed; // Increment time
-    requestAnimationFrame(animateWave); // Keep animating
-  }
-
-  animateWave(); // Start animation
-}
