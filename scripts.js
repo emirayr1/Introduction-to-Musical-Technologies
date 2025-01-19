@@ -43,13 +43,13 @@ function setContainerHeight(page) {
   } else if (page === 'signals') {
     container.style.height = '200vh';
     textCanvasAlt.height = '1000px';
-  } else if (page == 'sine_cosine') {
+  } else if (page == 'HALAT') {
     container.style.height = '200vh';
     textCanvasAlt.height = '1000px';
-  } else if (page == 'fourier') {
+  } else if (page == 'BirimÇember') {
     container.style.height = '200vh';
     textCanvasAlt.height = '1000px';
-  } else if (page == 'fft') {
+  } else if (page == 'MOLEKÜL') {
     container.style.height = '200vh';
     textCanvasAlt.height = '1000px';
   }
@@ -60,19 +60,18 @@ function setContainerHeight(page) {
 }
 
 function setAnimationPage(page) {
-  
+
   stopAnimation();
   resetMolecules();
   resetLines();
-
-  if (page == 'fft') {
-    
+  stopRopeAnimation();
+  if (page == 'MOLEKÜL') {
     createMolecules();
     time = 0;
     startAnimation();
   }
-  else if (page == 'fourier') {
-   
+  else if (page == 'HALAT') {
+    startRopeAnimation();
   }
   else {
     stopAnimation();
@@ -83,7 +82,7 @@ function setAnimationPage(page) {
 
 
 // Footer navigation logic
-const sectionsOrder = ['intro', 'signals', 'sine_cosine', 'fourier', 'fft'];
+const sectionsOrder = ['intro', 'signals', 'HALAT', 'BirimÇember', 'fft'];
 
 function navigateToNext() {
   const currentSection = getCurrentVisibleSection();
