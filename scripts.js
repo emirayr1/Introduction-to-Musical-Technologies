@@ -65,6 +65,7 @@ function setAnimationPage(page) {
   resetMolecules();
   resetLines();
   stopRopeAnimation();
+  
   if (page == 'MOLEKÜL') {
     createMolecules();
     time = 0;
@@ -72,6 +73,8 @@ function setAnimationPage(page) {
   }
   else if (page == 'HALAT') {
     startRopeAnimation();
+  
+    animSpring();
   }
   else {
     stopAnimation();
