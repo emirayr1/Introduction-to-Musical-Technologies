@@ -1,4 +1,4 @@
-// Global değişkenler ve fonksiyonlar
+
 let svg = d3.select('#animationContainer')
     .append('svg')
     .attr('width', 600)
@@ -81,6 +81,7 @@ function stopAnimation() {
     time = 0;
     cancelAnimationFrame(animationFrameId); // requestAnimationFrame'ı iptal et
     animationFrameId = null; // animationFrameId'yi sıfırlayarak, yeni bir animasyon başlatabilmek için
+    toggleButton.innerText = 'Stop Animation'
 }
 
 
@@ -102,17 +103,14 @@ toggleButton.addEventListener('click', function () {
 
 
 
-slider1.addEventListener('input', function(event) {
+slider1.addEventListener('input', function (event) {
     amplitude = event.target.value;  // Slider değeriyle amplitude'u güncelle
     slider1Value.textContent = slider1.value;  // Değeri ekranda göster
 });
 
 // Slider 2'nin değeri değiştiğinde
-slider2.addEventListener('input', function(event) {
+slider2.addEventListener('input', function (event) {
     frequency = event.target.value;
     slider2Value.textContent = slider2.value;
-    
+
 });
-
-
-

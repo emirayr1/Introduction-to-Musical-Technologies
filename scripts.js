@@ -60,17 +60,19 @@ function setContainerHeight(page) {
 }
 
 function setAnimationPage(page) {
-  stopAnimationCircle();
+  
   stopAnimation();
+  resetMolecules();
+  resetLines();
 
   if (page == 'fft') {
-    resetMolecules();
+    
     createMolecules();
     time = 0;
     startAnimation();
   }
   else if (page == 'fourier') {
-    startAnimationCircle();
+   
   }
   else {
     stopAnimation();
@@ -112,7 +114,3 @@ function getCurrentVisibleSection() {
 // Add event listeners to footer buttons
 document.getElementById('nextButton').addEventListener('click', navigateToNext);
 document.getElementById('prevButton').addEventListener('click', navigateToPrev);
-
-
-
-
