@@ -32,6 +32,37 @@ function showContent(topic) {    // SAYFA DEĞİŞTİRME VE AKTİFLİK AYARLAMA 
   window.scrollTo(0, 0);
 }
 
+function showMenus(menuId) {
+  // Tüm container'ları seç
+  const menus = document.querySelectorAll('.menus');
+
+  // Hepsini gizle
+  menus.forEach(menus => {
+    menus.classList.remove('active');
+  });
+
+  // Tıklanan container'ı göster
+  const activeMenus = document.getElementById(menuId);
+  if (activeMenus) {
+    activeMenus.classList.add('active');
+  }
+
+  const sidebarButtons = document.querySelectorAll('.sidebar button');
+
+  // Tüm butonlardan aktif sınıfını kaldır
+  sidebarButtons.forEach(button => {
+    button.classList.remove('active-button');
+  });
+
+  // Tıklanan butona aktif sınıfını ekle
+  const clickedButton = Array.from(sidebarButtons).find(button =>
+    button.getAttribute('onclick').includes(menuId)
+  );
+  if (clickedButton) {
+    clickedButton.classList.add('active-button');
+  }
+}
+
 function setContainerHeight(page) {
   const container = document.querySelector('.container');
   const textCanvasAlt = document.querySelector('.text_canvasAlt');
@@ -65,7 +96,7 @@ function setAnimationPage(page) {
   resetMolecules();
   resetLines();
   stopRopeAnimation();
-  
+
   if (page == 'MOLEKÜL') {
     createMolecules();
     time = 0;
@@ -73,8 +104,11 @@ function setAnimationPage(page) {
   }
   else if (page == 'HALAT') {
     startRopeAnimation();
-  
+
     animSpring();
+  }
+  else if (page == 'BirimÇember') {
+    console.log("tamamglddik")
   }
   else {
     stopAnimation();
@@ -85,7 +119,13 @@ function setAnimationPage(page) {
 
 
 // Footer navigation logic
-const sectionsOrder = ['intro', 'signals', 'HALAT', 'BirimÇember', 'fft'];
+const sectionsOrder = ['intro', 'Trigonometri', 'BirimÇember', 'Temelkavramlar', 'Vector',
+  'Kuvvet', 'Basınç', 'Güçenerji', 'Sesnedir', 'Sesoluşumu', 'Periyodikhareket',
+  'Birimçembervesinüs', 'Dalgakavramı', 'Sesdalgalarıvesinüs', 'Sinüsformülü',
+  'Hareketinegöredalga', 'Enerjidalga', 'Sesdalgasıçeşitleri', 'Sesdalgakatısıvı',
+  'Sesdalgagaz', 'Sesdalgaenerji', 'Sesdalgaşiddet', 'Sesşiddetidüzeyi', 'Girişim',
+  'HALAT', 'MOLEKÜL'
+];
 
 function navigateToNext() {
   const currentSection = getCurrentVisibleSection();

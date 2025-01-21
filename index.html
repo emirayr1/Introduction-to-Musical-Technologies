@@ -14,57 +14,82 @@
     <div class="container">
         <div class="sidebar">
             <h1>
-                <span style="color: #d1d1d1;">audio</span>
-                <span style="color: #5dd9f1;">programming</span>
-                <span style="color: #f3306e;">basics</span>
+                <span style="color: #d1d1d1;">Müzik</span>
+                <span style="color: #5dd9f1;">Teknolojisi</span>
+                <span style="color: #f3306e;">Sitesi</span>
             </h1>
             <h2>
                 Müzik Teknolojileri Sitesi
             </h2>
-            <ul>
-                <li><a href="#" onclick="showContent('baska')">INTRODUCTION</a></li>
-                <li><a href="#" onclick="showContent('intro')">GIRIS</a></li>
-                <li><a href="#" onclick="showContent('signals')">SIGNALS</a></li>
-                <li><a href="#" onclick="showContent('HALAT')">HALAT</a></li>
-                <li><a href="#" onclick="showContent('BirimÇember')">BİRİM ÇEMBER</a></li>
-                <li><a href="#" onclick="showContent('MOLEKÜL')">MOLEKÜL</a></li>
-            </ul>
-            <ul>
-                <li><a href="#" onclick="showContent('fade')">FADE</a></li>
-                <li><a href="#" onclick="showContent('distortion')">DISTORTION</a></li>
-                <li><a href="#" onclick="showContent('exponential')">EXPONENTIAL</a></li>
-            </ul>
-            <ul>
-                <li><a href="#" onclick="showContent('yeni')">Yeni</a></li>
-            </ul>
+            <button onclick="showMenus('sesFiziğiMenu')">Ses Fiziği</button>
+            <button onclick="showMenus('mikrofonlamaMenu')">Mikrofonlama Teknikleri</button>
+
+            <div class="menus" id="sesFiziğiMenu">
+                <ul>
+                    <li><a href="#" onclick="showContent('intro')">INTRODUCTION</a></li>
+                    <li><a href="#" onclick="showContent('Trigonometri')">Trigonometri</a></li>
+                    <li><a href="#" onclick="showContent('BirimÇember')">BİRİM ÇEMBER</a></li>
+                    <li><a href="#" onclick="showContent('Temelkavramlar')">Temel Kavramlar</a></li>
+                    <li><a href="#" onclick="showContent('Vector')">Vektörler</a></li>
+                    <li><a href="#" onclick="showContent('Kuvvet')">Kuvvet</a></li>
+
+                </ul>
+                <ul>
+                    <li><a href="#" onclick="showContent('Basınç')">Basınç</a></li>
+                    <li><a href="#" onclick="showContent('Güçenerji')">Güç Ve Enerji</a></li>
+                    <li><a href="#" onclick="showContent('Sesnedir')">Ses Nedir</a></li>
+                    <li><a href="#" onclick="showContent('Sesoluşumu')">Sesin Oluşumu</a></li>
+                    <li><a href="#" onclick="showContent('Periyodikhareket')">Periyodik Hareket</a></li>
+                    <li><a href="#" onclick="showContent('Birimçembervesinüs')">Birim Çember ve Sinüs</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" onclick="showContent('Dalgakavramı')">Dalga Kavramı</a></li>
+                    <li><a href="#" onclick="showContent('Sesdalgalarıvesinüs')">Ses Dalgaları Ve Sinüs</a></li>
+                    <li><a href="#" onclick="showContent('Sinüsformülü')">Sinüs Formülü</a></li>
+                    <li><a href="#" onclick="showContent('Hareketinegöredalga')">Hareket Doğrultularına Göre
+                            Dalgalar</a>
+                    </li>
+                    <li><a href="#" onclick="showContent('Enerjidalga')">Enerji Çeşidine Göre Dalgalar</a></li>
+                    <li><a href="#" onclick="showContent('Sesdalgasıçeşitleri')">Ses Dalgası Çeşitleri</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" onclick="showContent('Sesdalgakatısıvı')">Ses Dalgalarının Katı Ve Sıvı Ortamda
+                            Yayılması Ve Hızı</a></li>
+                    <li><a href="#" onclick="showContent('Sesdalgagaz')">Ses Dalgalarının Gaz Ortamda Yayılması Ve
+                            Hızı</a>
+                    </li>
+                    <li><a href="#" onclick="showContent('Sesdalgaenerji')">Ses Dalgalarının Enerjisi</a></li>
+                    <li><a href="#" onclick="showContent('Sesdalgaşiddet')">Ses Dalgalarının Şiddeti</a></li>
+                    <li><a href="#" onclick="showContent('Sesşiddetidüzeyi')">Ses Şiddeti Düzeyi (dB)</a></li>
+                    <li><a href="#" onclick="showContent('Girişim')">Girişim</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" onclick="showContent('HALAT')">HALAT</a></li>
+                    <li><a href="#" onclick="showContent('MOLEKÜL')">MOLEKÜL</a></li>
+                </ul>
+            </div>
+
+
+            <div class="menus" id="mikrofonlamaMenu">
+                <ul>
+                    <li><a href="#" onclick="showContent('intro')">Saçma</a></li>
+                    <li><a href="#" onclick="showContent('BirimÇember')">Sapan</a></li>
+                </ul>
+            </div>
         </div>
         <div class="content">
             <div id="intro">
                 <h2>THE UNIT CIRCLE</h2>
                 <h3>TRIGONOMETRY REWIEW</h3>
                 <div class="text_canvasAlt"> <!-- yazıların bulunacagı alt yer ve animasyonların olacagı -->
-                    <p>Welcome to the introduction to digital signal processing. This section gives an overview of the
-                        basics and prepares you for the upcoming topics.</p>
+                    <p>Bu bölümde ses fiziği konusunun .</p>
                 </div>
             </div>
-            <div id="signals" style="display:none;">
-                <h2>Signals</h2>
-                <h3>TRIGONOMETRY REWIEW</h3>
+            <div id="Trigonometri" style="display:none;">
+                <h2>Trigonometri</h2>
+                <h3>Trigonometri</h3>
                 <div class="text_canvasAlt">
-                    <p>Signals are functions that convey information. They are essential in communication, audio
-                        processing,
-                        and many other fields.</p>
-                </div>
-            </div>
-            <div id="HALAT" style="display:none;">
-                <h2>HALAT</h2>
-                <h3>TRIGONOMETRY REWIEW</h3>
-                <div class="text_canvasAlt">
-                    <p>Now that we’re familiar with notion of frequency, we can return to the question which was posed
-                        earlier in the</p>
-                    <canvas id="cw" width="400" height="400" style="border: 1px solid black;"></canvas>
-                    <canvas id="yay" width="400" height="400" style="border: 1px solid black;"></canvas>
-                    <p>canastan sonrası</p>
+                    <p></p>
                 </div>
             </div>
             <div id="BirimÇember" style="display:none;">
@@ -77,6 +102,164 @@
                     <div id="unitCircle"></div>
                     <p>Sin Value: <span id="SinValue">0</span></p>
                     <p>Cos Value: <span id="CosValue">0</span></p>
+                </div>
+            </div>
+            <div id="Temelkavramlar" style="display:none;">
+                <h2>Temel Kavramlar</h2>
+                <h3>Temel Kavramlar</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Vector" style="display:none;">
+                <h2>Vektör</h2>
+                <h3>Vektör</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Kuvvet" style="display:none;">
+                <h2>Kuvvet</h2>
+                <h3>Kuvvet</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Basınç" style="display:none;">
+                <h2>Basınç</h2>
+                <h3>Basınç</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Güçenerji" style="display:none;">
+                <h2>Güç ve enerji</h2>
+                <h3>Güç ve enerji</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Sesnedir" style="display:none;">
+                <h2>Ses nedir</h2>
+                <h3>Ses nedir</h3>
+                <div class="text_canvasAlt">
+                    <p> as</p>
+                </div>
+            </div>
+            <div id="Sesoluşumu" style="display:none;">
+                <h2>Ses oluşumu</h2>
+                <h3>Ses oluşumu</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Periyodikhareket" style="display:none;">
+                <h2>Periyodik hareket</h2>
+                <h3>Periyodik hareket</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Birimçembervesinüs" style="display:none;">
+                <h2>Birim çember ve sinüs</h2>
+                <h3>Birim çember ve sinüs</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Dalgakavramı" style="display:none;">
+                <h2>Dalga kavramı</h2>
+                <h3>Dalga kavramı</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Sesdalgalarıvesinüs" style="display:none;">
+                <h2>Ses dalgaları ve sinüs</h2>
+                <h3>Ses dalgaları ve sinüsı</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Sinüsformülü" style="display:none;">
+                <h2>Sinüs formülü</h2>
+                <h3>Sinüs formülü</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Hareketinegöredalga" style="display:none;">
+                <h2>Hareketine göre dalga</h2>
+                <h3>Hareketinegöredalga</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Enerjidalga" style="display:none;">
+                <h2>Enerji dalga</h2>
+                <h3>Enerji dalga</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Sesdalgasıçeşitleri" style="display:none;">
+                <h2>Ses dalgası çeşitleri</h2>
+                <h3>Ses dalgası çeşitleri</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Sesdalgakatısıvı" style="display:none;">
+                <h2>Ses dalga katı sıvı</h2>
+                <h3>Ses dalga katı sıvı</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Sesdalgagaz" style="display:none;">
+                <h2>Ses dalga gaz</h2>
+                <h3>Ses dalga gaz</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Sesdalgaenerji" style="display:none;">
+                <h2>Ses dalga enerji</h2>
+                <h3>Ses dalga enerji</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Sesdalgaşiddet" style="display:none;">
+                <h2>Ses dalga şiddet</h2>
+                <h3>Ses dalga şiddet</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Sesşiddetidüzeyi" style="display:none;">
+                <h2>Ses şiddeti düzeyi</h2>
+                <h3>Ses şiddeti düzeyi</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="Girişim" style="display:none;">
+                <h2>Girişim</h2>
+                <h3>Girişim</h3>
+                <div class="text_canvasAlt">
+                    <p></p>
+                </div>
+            </div>
+            <div id="HALAT" style="display:none;">
+                <h2>HALAT</h2>
+                <h3>TRIGONOMETRY REWIEW</h3>
+                <div class="text_canvasAlt">
+                    <p>Now that we’re familiar with notion of frequency, we can return to the question which was posed
+                        earlier in the</p>
+                    <canvas id="cw" width="400" height="400" style="border: 1px solid black;"></canvas>
+                    <canvas id="yay" width="400" height="400" style="border: 1px solid black;"></canvas>
+                    <p>canastan sonrası</p>
                 </div>
             </div>
             <div id="MOLEKÜL" style="display:none;">
@@ -99,34 +282,17 @@
                     <button id="toggleAnimation">StopAnimation</button>
                 </div>
             </div>
-            <div id="fade" style="display:none;">
-                <h2>FADE ONEMLI</h2>
-                <h3>TRIGONOMETRY REWIEW</h3>
-                <div class="text_canvasAlt">
-                    <p>Fade'in önemi burada çok büyük</p>
-                </div>
-            </div>
-            <div id="distortion" style="display:none;">
-                <h2>DISTORTION ONEMLI</h2>
-                <h3>TRIGONOMETRY REWIEW</h3>
-                <div class="text_canvasAlt">
-                    <p>Distortionu seviyorum</p>
-                </div>
-            </div>
-            <div id="exponential" style="display:none;">
-                <h2>EXPONENTIAL ONEMLI</h2>
-                <h3>TRIGONOMETRY REWIEW</h3>
-                <div class="text_canvasAlt">
-                    <p>EXPONENTIRAL FONKSİYONLAR DA VARDIR</p>
-                </div>
-            </div>
         </div>
-        <footer class="footer">
-            <div class="footer-content">
-                <button id="prevButton" class="footer-button">PREV</button>
-                <button id="nextButton" class="footer-button">NEXT</button>
-            </div>
-        </footer>
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <button id="prevButton" class="footer-button">PREV</button>
+            <button id="nextButton" class="footer-button">NEXT</button>
+        </div>
+    </footer>
     </div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="birimçember.js"></script>

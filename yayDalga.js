@@ -12,7 +12,7 @@ canvasSpring.height = 400;
     let currentLength = naturalLength; // Mevcut dalga boyu
     let springVelocity = 0; // Yay hareketinin hızı
     const springConstant = 0.02; // Yay sabiti
-    const damping = 0.96; // Sönümleme faktörü
+    const damping = 0.98; // Sönümleme faktörü
     const amplitude = 20; // Sinüsün yüksekliği
     const waveCount = 3; // Sabit frekansta tepe/çukur sayısı
 
