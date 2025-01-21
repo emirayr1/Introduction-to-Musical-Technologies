@@ -21,12 +21,16 @@
             <h2>
                 Müzik Teknolojileri Sitesi
             </h2>
+            <div class="house-logo" onclick="homeClick()">
+                <img src="images/home.svg" alt="Ev Logo">
+            </div>
             <button onclick="showMenus('sesFiziğiMenu')">Ses Fiziği</button>
             <button onclick="showMenus('mikrofonlamaMenu')">Mikrofonlama Teknikleri</button>
 
+
             <div class="menus" id="sesFiziğiMenu">
                 <ul>
-                    <li><a href="#" onclick="showContent('intro')">INTRODUCTION</a></li>
+                    <li><a href="#" onclick="showContent('introFizik')">INTRODUCTION</a></li>
                     <li><a href="#" onclick="showContent('Trigonometri')">Trigonometri</a></li>
                     <li><a href="#" onclick="showContent('BirimÇember')">BİRİM ÇEMBER</a></li>
                     <li><a href="#" onclick="showContent('Temelkavramlar')">Temel Kavramlar</a></li>
@@ -72,13 +76,20 @@
 
             <div class="menus" id="mikrofonlamaMenu">
                 <ul>
-                    <li><a href="#" onclick="showContent('intro')">Saçma</a></li>
+                    <li><a href="#" onclick="showContent('introFizik')">Saçma</a></li>
                     <li><a href="#" onclick="showContent('BirimÇember')">Sapan</a></li>
                 </ul>
             </div>
         </div>
         <div class="content">
-            <div id="intro">
+            <div id="homePage">
+                <h2>Home Page</h2>
+                <h3>Welcome</h3>
+                <div class="text_canvasAlt"> <!-- yazıların bulunacagı alt yer ve animasyonların olacagı -->
+                    <p>Siteye Hoşgeldiniz</p>
+                </div>
+            </div>
+            <div id="introFizik">
                 <h2>THE UNIT CIRCLE</h2>
                 <h3>TRIGONOMETRY REWIEW</h3>
                 <div class="text_canvasAlt"> <!-- yazıların bulunacagı alt yer ve animasyonların olacagı -->

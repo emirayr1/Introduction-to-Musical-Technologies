@@ -1,6 +1,9 @@
-window.onload = function () {
-  showContent('intro') // Sayfa adı: intro
+let isHomeClicked = false;
 
+
+
+window.onload = function () {
+  showContent('homePage') // Sayfa adı: intro
 };
 
 
@@ -32,24 +35,42 @@ function showContent(topic) {    // SAYFA DEĞİŞTİRME VE AKTİFLİK AYARLAMA 
   window.scrollTo(0, 0);
 }
 
-function showMenus(menuId) {
-  // Tüm container'ları seç
-  const menus = document.querySelectorAll('.menus');
+function homeClick() {
+  isHomeClicked = true;
+  console.log(isHomeClicked)
+  const sidebarButtons = document.querySelectorAll('.sidebar button');
+  sidebarButtons.forEach(button => {
+    button.classList.remove('active-button');
+  });
 
-  // Hepsini gizle
-  menus.forEach(menus => {
-    menus.classList.remove('active');
+  const allMenus = document.querySelectorAll('.menus');
+  allMenus.forEach(menu => {
+    menu.style.display = 'none'; // Tüm menüleri gizle
+  });
+
+  showContent('homePage');
+
+  const houseLogo = document.querySelector('.house-logo img');
+  houseLogo.classList.add('active-img');
+
+}
+function showMenus(menuId) {
+
+  // Tüm container'ları seç
+  // Menülerdeki tüm .menus sınıfına sahip öğeleri gizle
+  const allMenus = document.querySelectorAll('.menus');
+  allMenus.forEach(menu => {
+    menu.style.display = 'none'; // Tüm menüleri gizle
   });
 
   // Tıklanan container'ı göster
   const activeMenus = document.getElementById(menuId);
   if (activeMenus) {
-    activeMenus.classList.add('active');
+    activeMenus.style.display = 'block'; // Tıklanan menüyü göster
   }
 
-  const sidebarButtons = document.querySelectorAll('.sidebar button');
-
   // Tüm butonlardan aktif sınıfını kaldır
+  const sidebarButtons = document.querySelectorAll('.sidebar button');
   sidebarButtons.forEach(button => {
     button.classList.remove('active-button');
   });
@@ -58,10 +79,32 @@ function showMenus(menuId) {
   const clickedButton = Array.from(sidebarButtons).find(button =>
     button.getAttribute('onclick').includes(menuId)
   );
+
+
   if (clickedButton) {
     clickedButton.classList.add('active-button');
+    const buttonName = clickedButton.innerText || clickedButton.textContent;
+
+    // Tıklanan buton adına göre bir işlem yap
+    if (buttonName === "Ses Fiziği") {
+      showContent('introFizik')
+    } else if (buttonName === "Mikrofonlama Teknikleri") {
+      console.log("Mikrofonlama Teknikleri menüsü açıldı!");
+    }
   }
+  const houseLogo = document.querySelector('.house-logo img');
+  houseLogo.classList.remove('active-img');
 }
+
+
+
+
+
+
+
+
+
+
 
 function setContainerHeight(page) {
   const container = document.querySelector('.container');
@@ -119,7 +162,7 @@ function setAnimationPage(page) {
 
 
 // Footer navigation logic
-const sectionsOrder = ['intro', 'Trigonometri', 'BirimÇember', 'Temelkavramlar', 'Vector',
+const sectionsOrder = ['introFizik', 'Trigonometri', 'BirimÇember', 'Temelkavramlar', 'Vector',
   'Kuvvet', 'Basınç', 'Güçenerji', 'Sesnedir', 'Sesoluşumu', 'Periyodikhareket',
   'Birimçembervesinüs', 'Dalgakavramı', 'Sesdalgalarıvesinüs', 'Sinüsformülü',
   'Hareketinegöredalga', 'Enerjidalga', 'Sesdalgasıçeşitleri', 'Sesdalgakatısıvı',
