@@ -17,8 +17,6 @@ function showContent(topic) {    // SAYFA DEĞİŞTİRME VE AKTİFLİK AYARLAMA 
 
 
   // SET CONTAINER HEIGHT
-
-
   // Remove 'active' class from all sidebar links
   const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
   sidebarLinks.forEach(link => link.classList.remove('active'));
@@ -35,10 +33,20 @@ function showContent(topic) {    // SAYFA DEĞİŞTİRME VE AKTİFLİK AYARLAMA 
   window.scrollTo(0, 0);
 }
 
+
 function homeClick() {
   isHomeClicked = true;
-  console.log(isHomeClicked)
-  const sidebarButtons = document.querySelectorAll('.sidebar button');
+  console.log(isHomeClicked);
+
+  const sidebar = document.querySelector('.sidebar');
+  const container = document.querySelector('.container');
+
+
+  sidebar.classList.add('hide');
+  sidebar.classList.remove('show');
+
+
+  const sidebarButtons = document.querySelectorAll('.menüButonları button');
   sidebarButtons.forEach(button => {
     button.classList.remove('active-button');
   });
@@ -50,12 +58,11 @@ function homeClick() {
 
   showContent('homePage');
 
-  const houseLogo = document.querySelector('.house-logo img');
-  houseLogo.classList.add('active-img');
+  const houseLogo = document.querySelector('.house-logo');
+  houseLogo.classList.add('active');
 
 }
 function showMenus(menuId) {
-
   // Tüm container'ları seç
   // Menülerdeki tüm .menus sınıfına sahip öğeleri gizle
   const allMenus = document.querySelectorAll('.menus');
@@ -69,8 +76,17 @@ function showMenus(menuId) {
     activeMenus.style.display = 'block'; // Tıklanan menüyü göster
   }
 
+  const sidebar = document.querySelector('.sidebar');
+  const container = document.querySelector('.container');
+  sidebar.classList.remove('hide');
+  sidebar.style.display = 'block'; // Sidebar'ı göster
+
+  setTimeout(() => {
+    sidebar.classList.add('show'); // Animasyonla sidebar'ı aşağı kaydırarak göster
+  }, 10);
+
   // Tüm butonlardan aktif sınıfını kaldır
-  const sidebarButtons = document.querySelectorAll('.sidebar button');
+  const sidebarButtons = document.querySelectorAll('.menüButonları button');
   sidebarButtons.forEach(button => {
     button.classList.remove('active-button');
   });
@@ -92,18 +108,9 @@ function showMenus(menuId) {
       console.log("Mikrofonlama Teknikleri menüsü açıldı!");
     }
   }
-  const houseLogo = document.querySelector('.house-logo img');
-  houseLogo.classList.remove('active-img');
+  const houseLogo = document.querySelector('.house-logo');
+  houseLogo.classList.remove('active');
 }
-
-
-
-
-
-
-
-
-
 
 
 function setContainerHeight(page) {
